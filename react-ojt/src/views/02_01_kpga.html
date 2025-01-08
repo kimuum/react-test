@@ -1,0 +1,643 @@
+<!DOCTYPE html><html lang="ko"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="format-detection" content="telephone=no">
+	
+	<title>OJT 과제 : KPGA - 선수 위치 찾기 서비스</title>
+	<!-- Icon & Favicon -->
+	<link rel="shortcut icon" href="../favicon.ico">
+	<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+	<link rel="apple-touch-icon" href="../favicon-180x180.png">
+	<!-- // Icon & Favicon -->
+	<link rel="stylesheet" href="../css/project-name-sass.css">
+</head>
+
+<body data-pagestatus="new : 24.12.24">
+	<div class="wrap wrap_kpga">
+		<!-- Header -->
+		<header class="header_container">
+			<div class="header_area">
+				<div class="header_left">
+					<h1 class="header_title">
+						<a href="javascript:void(0)" class="logo_box">
+							<img src="../img/ic_logo.png" alt="KPGA STATS">
+						</a>
+						<strong class="page_title">선수 위치 찾기 서비스</strong>
+					</h1>
+				</div>
+				<div class="header_right">
+					<div class="score_link_box">
+						<a href="javascript:void(0)" target="_blank" title="새창열림">LIVE SCORE</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- // Header -->
+		<!-- Contents -->
+		<main class="main">
+			<div class="content_container">
+				<div class="content_area">
+					<!-- 선수 랭킹 영역 -->
+					<section class="ranker_container">
+						<div class="content_inner">
+							<div class="title_box">
+								<h2 class="title">20조</h2>
+								<p class="start_time_info">출발 시간 : <span>#1, AM 11:08</span></p>
+							</div>
+							<!--
+                [D] 테이블 내 색상 표시 클래스 목록 :
+                .num_rank : 주황
+                .num_plus : 파랑
+                .num_minus : 빨강
+              -->
+							<div class="table_container">
+								<div class="table_area">
+									<table class="table">
+										<caption class="blind">현재 조 선수 현황표 : 선수, 순위, 오늘 스코어, 누적 스코어, 제네시스 포인트, 제네시스 상금 순위, 평균 타수</caption>
+										<colgroup>
+											<col style="width: 295px">
+											<col>
+											<col>
+											<col>
+											<col>
+											<col>
+											<col>
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">선수</th>
+												<th scope="col">순위</th>
+												<th scope="col">오늘 스코어</th>
+												<th scope="col">누적 스코어</th>
+												<th scope="col">제네시스 포인트</th>
+												<th scope="col">제네시스 상금 순위</th>
+												<th scope="col">평균 타수</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="player_box">
+													<div class="img_box">
+														<img src="../img/img_player_01.png" alt="김병준 선수">
+													</div>
+													<strong class="player_name">김병준</strong>
+												</td>
+												<td class="num_rank">2</td>
+												<td>E</td>
+												<td>-9</td>
+												<td>89th<span class="num_bottom">3,142 points</span></td>
+												<td>36th<span class="num_bottom">￦113,600,000</span></td>
+												<td>70.25</td>
+											</tr>
+											<tr>
+												<td class="player_box">
+													<div class="img_box">
+														<img src="../img/img_player_02.png" alt="이승택 선수">
+													</div>
+													<strong class="player_name">이승택</strong>
+												</td>
+												<td class="num_rank">4</td>
+												<td class="num_plus">+1</td>
+												<td>-9</td>
+												<td>89th<span class="num_bottom">3,142 points</span></td>
+												<td>36th<span class="num_bottom">￦113,600,000</span></td>
+												<td>70.25</td>
+											</tr>
+											<tr>
+												<td class="player_box">
+													<div class="img_box">
+														<img src="../img/img_player_03.png" alt="김태우 선수">
+													</div>
+													<strong class="player_name">김태우</strong>
+												</td>
+												<td class="num_rank">3</td>
+												<td class="num_minus">-1</td>
+												<td>-9</td>
+												<td>89th<span class="num_bottom">3,142 points</span></td>
+												<td>36th<span class="num_bottom">￦113,600,000</span></td>
+												<td>70.25</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- // 선수 랭킹 영역 -->
+					<!-- 홀바이홀 영역 -->
+					<section class="hole_container">
+						<div class="content_inner">
+							<div class="sub_title_box">
+								<h3 class="sub_title">홀 바이 홀</h3>
+								<div class="hole_info_box">
+									<strong class="hole_current">11 Hole</strong> Par 4,431yds
+								</div>
+							</div>
+							<!--
+                [D] 테이블 내 색상 표시 클래스 목록 :
+                ** thead **
+                .bg_in_out : 중간회색(ebebeb)
+                .bg_total : 진한회색(d6d6d6)   
+                .bg_hole : 주황
+                ** tbody **
+                .color_white : 흰색 텍스트
+                .bg_light_gray :연한회색(fcfcfc)
+                
+                ** 상태 표시 색상 **
+                .type_albatross : 알바트로스
+                .type_eagle : 이글
+                .type_buddy : 버디
+                .type_bogey : 보기
+                .type_db_bogey : 더블보기
+                .type_tp_bogey : 트리플 보기
+                .type_hole_in_one : 홀인원
+              -->
+							<div class="table_container">
+								<div class="table_area">
+									<table class="table">
+										<caption class="blind">선수별 홀 현황표 : HOLE, PAR, 김병준, 이승택, 김태우</caption>
+										<colgroup>
+											<col style="width: 90px">
+											<col>
+											<col>
+											<col>
+											<col>
+											<col>
+											<col>
+											<col>
+											<col>
+											<col>
+											<col>
+											<col>
+											<col>
+											<col>
+											<col>
+											<col>
+											<col>
+											<col>
+											<col>
+											<col>
+											<col>
+											<col style="width: 90px">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="row">HOLE</th>
+												<th scope="col">1</th>
+												<th scope="col">2</th>
+												<th scope="col">3</th>
+												<th scope="col">4</th>
+												<th scope="col">5</th>
+												<th scope="col">6</th>
+												<th scope="col">7</th>
+												<th scope="col">8</th>
+												<th scope="col">9</th>
+												<th scope="col" class="bg_in_out">OUT</th>
+												<th scope="col">10</th>
+												<th scope="col" class="bg_hole current_hole">11</th>
+												<th scope="col">12</th>
+												<th scope="col">13</th>
+												<th scope="col">14</th>
+												<th scope="col">15</th>
+												<th scope="col">16</th>
+												<th scope="col">17</th>
+												<th scope="col">18</th>
+												<th scope="col" class="bg_in_out">IN</th>
+												<th scope="col" class="bg_total">TOTAL</th>
+											</tr>
+											<tr>
+												<th scope="row">PAR</th>
+												<th scope="col">4</th>
+												<th scope="col">4</th>
+												<th scope="col">5</th>
+												<th scope="col">4</th>
+												<th scope="col">3</th>
+												<th scope="col">4</th>
+												<th scope="col">5</th>
+												<th scope="col">3</th>
+												<th scope="col">5</th>
+												<th scope="col" class="bg_in_out">43</th>
+												<th scope="col">3</th>
+												<th scope="col" class="bg_hole">4</th>
+												<th scope="col">4</th>
+												<th scope="col">4</th>
+												<th scope="col">4</th>
+												<th scope="col">4</th>
+												<th scope="col">4</th>
+												<th scope="col">4</th>
+												<th scope="col">4</th>
+												<th scope="col" class="bg_in_out">43</th>
+												<th scope="col" class="bg_total">72</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row" class="bg_light_gray">김병준</th>
+												<td class="type_db_bogey color_white">7</td>
+												<td class="type_db_bogey color_white">7</td>
+												<td>5</td>
+												<td>4</td>
+												<td>3</td>
+												<td class="type_bogey color_white">5</td>
+												<td>5</td>
+												<td>3</td>
+												<td>5</td>
+												<td class="bg_light_gray">38</td>
+												<td class="type_buddy color_white">3</td>
+												<td class="bg_hole">3</td>
+												<td>4</td>
+												<td>4</td>
+												<td>4</td>
+												<td>4</td>
+												<td>4</td>
+												<td>4</td>
+												<td class="type_db_bogey color_white">6</td>
+												<td class="bg_light_gray">38</td>
+												<td class="bg_light_gray">38</td>
+											</tr>
+											<tr>
+												<th scope="row" class="bg_light_gray">이승택</th>
+												<td>4</td>
+												<td>4</td>
+												<td>5</td>
+												<td>4</td>
+												<td>3</td>
+												<td>4</td>
+												<td>5</td>
+												<td class="type_buddy color_white">3</td>
+												<td class="type_bogey color_white">6</td>
+												<td class="bg_light_gray">32</td>
+												<td class="type_buddy color_white">2</td>
+												<td class="bg_hole">2</td>
+												<td>4</td>
+												<td>4</td>
+												<td>4</td>
+												<td>4</td>
+												<td>3</td>
+												<td class="type_eagle color_white">2</td>
+												<td>5</td>
+												<td class="bg_light_gray">32</td>
+												<td class="bg_light_gray">76</td>
+											</tr>
+											<tr>
+												<th scope="row" class="bg_light_gray">김태우</th>
+												<td>5</td>
+												<td class="type_db_bogey color_white">6</td>
+												<td>6</td>
+												<td class="type_db_bogey color_white">6</td>
+												<td>3</td>
+												<td>4</td>
+												<td>5</td>
+												<td>3</td>
+												<td>5</td>
+												<td class="bg_light_gray">31</td>
+												<td>3</td>
+												<td class="bg_hole"></td>
+												<td>4</td>
+												<td>3</td>
+												<td>4</td>
+												<td>5</td>
+												<td>3</td>
+												<td>4</td>
+												<td>3</td>
+												<td class="bg_light_gray">31</td>
+												<td class="bg_light_gray">73</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="hole_status_area">
+									<ul class="hole_status_list">
+										<li class="status_list type_albatross">
+											<span>알바트로스</span>
+										</li>
+										<li class="status_list type_eagle">
+											<span>이글</span>
+										</li>
+										<li class="status_list type_buddy">
+											<span>버디</span>
+										</li>
+										<li class="status_list type_par">
+											<span>파</span>
+										</li>
+										<li class="status_list type_bogey">
+											<span>보기</span>
+										</li>
+										<li class="status_list type_db_bogey">
+											<span>더블보기</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- // 홀바이홀 영역 -->
+					<!-- 샷트랙커 영역 -->
+					<section class="tracker_container">
+						<div class="content_inner">
+							<div class="sub_title_box">
+								<h3 class="sub_title">샷 트랙커</h3>
+							</div>
+							<div class="tab_btn_main" role="tablist">
+								<button type="button" id="tab_main_anchor_01" aria-controls="tab_main_01" role="tab" aria-selected="false" class="btn_tab">
+									<span>1</span>
+								</button>
+								<button type="button" id="tab_main_anchor_02" aria-controls="tab_main_02" role="tab" aria-selected="false" class="btn_tab">
+									<span>2</span>
+								</button>
+								<button type="button" id="tab_main_anchor_03" aria-controls="tab_main_03" role="tab" aria-selected="false" class="btn_tab">
+									<span>3</span>
+								</button>
+								<button type="button" id="tab_main_anchor_04" aria-controls="tab_main_04" role="tab" aria-selected="false" class="btn_tab">
+									<span>4</span>
+								</button>
+								<button type="button" id="tab_main_anchor_05" aria-controls="tab_main_05" role="tab" aria-selected="false" class="btn_tab">
+									<span>5</span>
+								</button>
+								<button type="button" id="tab_main_anchor_06" aria-controls="tab_main_06" role="tab" aria-selected="false" class="btn_tab">
+									<span>6</span>
+								</button>
+								<button type="button" id="tab_main_anchor_07" aria-controls="tab_main_07" role="tab" aria-selected="false" class="btn_tab">
+									<span>7</span>
+								</button>
+								<button type="button" id="tab_main_anchor_08" aria-controls="tab_main_08" role="tab" aria-selected="false" class="btn_tab">
+									<span>8</span>
+								</button>
+								<button type="button" id="tab_main_anchor_09" aria-controls="tab_main_09" role="tab" aria-selected="false" class="btn_tab">
+									<span>9</span>
+								</button>
+								<button type="button" id="tab_main_anchor_10" aria-controls="tab_main_10" role="tab" aria-selected="false" class="btn_tab">
+									<span>10</span>
+								</button>
+								<button type="button" id="tab_main_anchor_11" aria-controls="tab_main_11" role="tab" aria-selected="true" class="btn_tab is_active">
+									<span>11</span>
+								</button>
+								<button type="button" id="tab_main_anchor_12" aria-controls="tab_main_12" role="tab" aria-selected="false" class="btn_tab">
+									<span>12</span>
+								</button>
+								<button type="button" id="tab_main_anchor_13" aria-controls="tab_main_13" role="tab" aria-selected="false" class="btn_tab">
+									<span>13</span>
+								</button>
+								<button type="button" id="tab_main_anchor_14" aria-controls="tab_main_14" role="tab" aria-selected="false" class="btn_tab">
+									<span>14</span>
+								</button>
+								<button type="button" id="tab_main_anchor_15" aria-controls="tab_main_15" role="tab" aria-selected="false" class="btn_tab">
+									<span>15</span>
+								</button>
+								<button type="button" id="tab_main_anchor_16" aria-controls="tab_main_16" role="tab" aria-selected="false" class="btn_tab">
+									<span>16</span>
+								</button>
+								<button type="button" id="tab_main_anchor_17" aria-controls="tab_main_17" role="tab" aria-selected="false" class="btn_tab">
+									<span>17</span>
+								</button>
+								<button type="button" id="tab_main_anchor_18" aria-controls="tab_main_18" role="tab" aria-selected="false" class="btn_tab">
+									<span>18</span>
+								</button>
+							</div>
+							<div class="tab_container_main">
+								<div id="tab_main_01" tabindex="-1" role="tabpanel" aria-labelledby="tab_main_anchor_01" class="tab_content_area">탭01</div>
+								<div id="tab_main_02" tabindex="-1" role="tabpanel" aria-labelledby="tab_main_anchor_02" class="tab_content_area">탭02</div>
+								<div id="tab_main_03" tabindex="-1" role="tabpanel" aria-labelledby="tab_main_anchor_03" class="tab_content_area">탭03</div>
+								<div id="tab_main_04" tabindex="-1" role="tabpanel" aria-labelledby="tab_main_anchor_04" class="tab_content_area">탭04</div>
+								<div id="tab_main_05" tabindex="-1" role="tabpanel" aria-labelledby="tab_main_anchor_05" class="tab_content_area">탭05</div>
+								<div id="tab_main_06" tabindex="-1" role="tabpanel" aria-labelledby="tab_main_anchor_06" class="tab_content_area">탭06</div>
+								<div id="tab_main_07" tabindex="-1" role="tabpanel" aria-labelledby="tab_main_anchor_07" class="tab_content_area">탭07</div>
+								<div id="tab_main_08" tabindex="-1" role="tabpanel" aria-labelledby="tab_main_anchor_08" class="tab_content_area">탭08</div>
+								<div id="tab_main_09" tabindex="-1" role="tabpanel" aria-labelledby="tab_main_anchor_09" class="tab_content_area">탭09</div>
+								<div id="tab_main_10" tabindex="-1" role="tabpanel" aria-labelledby="tab_main_anchor_10" class="tab_content_area">탭10</div>
+								<div id="tab_main_11" tabindex="0" role="tabpanel" aria-labelledby="tab_main_anchor_11" class="tab_content_area is_show">
+									<div class="third_title_box">
+										<h4 class="third_title">11 HOLE</h4>
+										<div class="hole_info_box">
+											<span>Par 4, 431Yds</span>
+										</div>
+									</div>
+									<div class="tab_btn_sub" role="tablist">
+										<button type="button" id="tab_sub_anchor_01" aria-controls="tab_sub_01" role="tab" aria-selected="false" class="btn_tab">
+											<span>Round 1</span>
+										</button>
+										<button type="button" id="tab_sub_anchor_02" aria-controls="tab_sub_02" role="tab" aria-selected="false" class="btn_tab">
+											<span>Round 2</span>
+										</button>
+										<button type="button" id="tab_sub_anchor_03" aria-controls="tab_sub_03" role="tab" aria-selected="false" class="btn_tab">
+											<span>Round 3</span>
+										</button>
+										<button type="button" id="tab_sub_anchor_04" aria-controls="tab_sub_04" role="tab" aria-selected="true" class="btn_tab is_active">
+											<span>Round 4</span>
+										</button>
+									</div>
+									<div class="tab_container_sub">
+										<div id="tab_sub_01" tabindex="-1" role="tabpanel" aria-labelledby="tab_sub_anchor_01" class="tab_content_area">두번째탭01</div>
+										<div id="tab_sub_02" tabindex="-1" role="tabpanel" aria-labelledby="tab_sub_anchor_02" class="tab_content_area">두번째탭02</div>
+										<div id="tab_sub_03" tabindex="-1" role="tabpanel" aria-labelledby="tab_sub_anchor_03" class="tab_content_area">두번째탭03</div>
+										<div id="tab_sub_04" tabindex="0" role="tabpanel" aria-labelledby="tab_sub_anchor_04" class="tab_content_area is_show">
+											<div class="tracker_detail_area">
+												<div class="tracker_detail_left">
+													<div class="field_map">
+														<img src="../img/img_field.jpg" alt="필드 지도">
+													</div>
+													<div class="tooltip_area">
+														<div class="tooltip_box player_01" style="top: 80px; left: 153px;" data-content="tab_third_01">
+															<div class="img_box">
+																<img src="../img/img_player_01.png" alt="김병준">
+															</div>
+															<div class="player_summary">
+																<strong class="name">김병준</strong>
+																<p class="summary">Shot 1 : 251.5Yds (남은 거리 166Yds)</p>
+															</div>
+															<button type="button" class="btn_close">
+																<span class="blind">닫기</span>
+															</button>
+														</div>
+														<div class="tooltip_box player_02" style="top: 108px; left: 131px;" data-content="tab_third_02">
+															<div class="img_box">
+																<img src="../img/img_player_02.png" alt="이승택">
+															</div>
+															<div class="player_summary">
+																<strong class="name">이승택</strong>
+																<p class="summary">Shot 1 : 251.5Yds (남은 거리 166Yds)</p>
+															</div>
+															<button type="button" class="btn_close">
+																<span class="blind">닫기</span>
+															</button>
+														</div>
+														<div class="tooltip_box player_03 is_show" style="top: 100px; left: 105px;" data-content="tab_third_03">
+															<div class="img_box">
+																<img src="../img/img_player_03.png" alt="김태우">
+															</div>
+															<div class="player_summary">
+																<strong class="name">김태우</strong>
+																<p class="summary">Shot 1 : 251.5Yds (남은 거리 166Yds)</p>
+															</div>
+															<button type="button" class="btn_close">
+																<span class="blind">닫기</span>
+															</button>
+														</div>
+													</div>
+												</div>
+												<div class="tracker_detail_right">
+													<div class="tab_btn_third" role="tablist">
+														<!-- 
+                              ** 선수 활성화 표시 색상 **
+                              .type_player_01 : 연두색(e4e212)
+                              .type_player_02 : 빨강(fe3534)
+                              .type_player_03 : 보라(3942ec)
+                            -->
+														<button type="button" id="tab_third_anchor_01" aria-controls="tab_third_01" role="tab" aria-selected="false" class="btn_tab type_player_01">
+															<span class="img_box">
+																<img src="../img/img_player_01.png" alt="김병준">
+															</span>
+															<span>김병준</span>
+														</button>
+														<button type="button" id="tab_third_anchor_02" aria-controls="tab_third_02" role="tab" aria-selected="false" class="btn_tab type_player_02">
+															<span class="img_box">
+																<img src="../img/img_player_02.png" alt="이승택">
+															</span>
+															<span>이승택</span>
+														</button>
+														<button type="button" id="tab_third_anchor_03" aria-controls="tab_third_03" role="tab" aria-selected="true" class="btn_tab is_active type_player_03">
+															<span class="img_box">
+																<img src="../img/img_player_03.png" alt="김태우">
+															</span>
+															<span>김태우</span>
+														</button>
+													</div>
+													<div class="tab_container_third">
+														<div id="tab_third_01" tabindex="-1" role="tabpanel" aria-labelledby="tab_third_anchor_01" class="tab_content_area">세번째탭01</div>
+														<div id="tab_third_02" tabindex="-1" role="tabpanel" aria-labelledby="tab_third_anchor_02" class="tab_content_area">세번째탭02</div>
+														<div id="tab_third_03" tabindex="0" role="tabpanel" aria-labelledby="tab_third_anchor_03" class="tab_content_area is_show">
+															<div class="shot_list_area">
+																<ul class="shot_list_box">
+																	<li>Shot 1 : 251.5 Yds 페어웨이(남은 거리 166.1 Yds)</li>
+																	<li>Shot 2 : 173.3 Yds 러프(남은 거리 11.3 Yds)</li>
+																	<li>Shot 3 : 11.9 Yds 그린(남은거리 0.9 Yds)</li>
+																	<li>Shot 4 : 홀인</li>
+																	<li>Shot 5 : 11.9 Yds 그린(남은거리 0.9 Yds)</li>
+																	<li>Shot 6 : 11.9 Yds 그린(남은거리 0.9 Yds)</li>
+																	<li>Shot 7 : 11.9 Yds 그린(남은거리 0.9 Yds)</li>
+																	<li>Shot 1 : 251.5 Yds 페어웨이(남은 거리 166.1 Yds)</li>
+																	<li>Shot 2 : 173.3 Yds 러프(남은 거리 11.3 Yds)</li>
+																	<li>Shot 3 : 11.9 Yds 그린(남은거리 0.9 Yds)</li>
+																	<li>Shot 4 : 홀인</li>
+																	<li>Shot 5 : 11.9 Yds 그린(남은거리 0.9 Yds)</li>
+																	<li>Shot 6 : 11.9 Yds 그린(남은거리 0.9 Yds)</li>
+																	<li>Shot 7 : 11.9 Yds 그린(남은거리 0.9 Yds)</li>
+																</ul>
+															</div>
+															<div class="hole_chart_area">
+																<div class="hole_chart_left">
+																	<div class="label_box">
+																		<strong class="label">홀 성적</strong>
+																	</div>
+																	<div class="chart_box">
+																		<div class="img_box">
+																			<img src="../img/img_graph.png" alt="홀성적 현황 원형 그래프 - 홀인원 30%, 알바트로스 20%, 이글 10%, 버디 10%, 파 50%, 보기 40%, 더블보기 14%, 3+ 보기 10%">
+																		</div>
+																	</div>
+																	<div class="hole_status_area">
+																		<ul class="hole_status_list">
+																			<!--
+                                        ** 상태 표시 색상 **
+                                        .type_par : 파
+                                        .type_albatross : 알바트로스
+                                        .type_eagle : 이글
+                                        .type_buddy : 버디
+                                        .type_bogey : 보기
+                                        .type_db_bogey : 더블보기
+                                        .type_tp_bogey : 트리플 보기
+                                        .type_hole_in_one : 홀인원
+                                      -->
+																			<li class="status_list type_hole_in_one">
+																				<span>홀인원</span>
+																			</li>
+																			<li class="status_list type_albatross">
+																				<span>알바트로스</span>
+																			</li>
+																			<li class="status_list type_eagle">
+																				<span>이글</span>
+																			</li>
+																			<li class="status_list type_buddy">
+																				<span>버디</span>
+																			</li>
+																			<li class="status_list type_par">
+																				<span>파</span>
+																			</li>
+																			<li class="status_list type_bogey">
+																				<span>보기</span>
+																			</li>
+																			<li class="status_list type_db_bogey">
+																				<span>더블보기</span>
+																			</li>
+																			<li class="status_list type_tp_bogey">
+																				<span>3+ 보기</span>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+																<div class="hole_chart_right">
+																	<div class="label_box">
+																		<strong class="label">홀 성적</strong>
+																	</div>
+																	<div class="hole_record_list">
+																		<dl>
+																			<dt>총난이도</dt>
+																			<dd>9</dd>
+																		</dl>
+																		<dl>
+																			<dt>평균타수</dt>
+																			<dd>4.09</dd>
+																		</dl>
+																		<dl>
+																			<dt>최장타</dt>
+																			<dd>301 Yards</dd>
+																		</dl>
+																		<dl>
+																			<dt>페어웨이 안착률</dt>
+																			<dd>68.15%</dd>
+																		</dl>
+																		<dl>
+																			<dt>그린적중률(GIR)</dt>
+																			<dd>65.83%</dd>
+																		</dl>
+																		<dl>
+																			<dt>최장퍼팅</dt>
+																			<dd>19 Yards</dd>
+																		</dl>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="player_info_link_box">
+														<a href="javascript:void(0)" target="_blank" title="새창 열림" class="link_more">
+															<span>선수 정보 상세보기</span>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="tab_main_12" tabindex="-1" role="tabpanel" aria-labelledby="tab_main_anchor_12" class="tab_content_area">탭12</div>
+								<div id="tab_main_13" tabindex="-1" role="tabpanel" aria-labelledby="tab_main_anchor_13" class="tab_content_area">탭13</div>
+								<div id="tab_main_14" tabindex="-1" role="tabpanel" aria-labelledby="tab_main_anchor_14" class="tab_content_area">탭14</div>
+								<div id="tab_main_15" tabindex="-1" role="tabpanel" aria-labelledby="tab_main_anchor_15" class="tab_content_area">탭15</div>
+								<div id="tab_main_16" tabindex="-1" role="tabpanel" aria-labelledby="tab_main_anchor_16" class="tab_content_area">탭16</div>
+								<div id="tab_main_17" tabindex="-1" role="tabpanel" aria-labelledby="tab_main_anchor_17" class="tab_content_area">탭17</div>
+								<div id="tab_main_18" tabindex="-1" role="tabpanel" aria-labelledby="tab_main_anchor_18" class="tab_content_area">탭18</div>
+							</div>
+						</div>
+					</section>
+					<!-- // 샷트랙커 영역 -->
+				</div>
+			</div>
+		</main>
+		<!-- // Contents -->
+	</div>
+	<script src="../js/apps/main.js"></script>
+
+
+
+</body></html>
